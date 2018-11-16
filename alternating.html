@@ -15,11 +15,11 @@
       context.fillStyle = 'blue'
       for(var i = 1; i <= 10; i++){
         if(i%2 === 0){
-          context.fillRect(24 * i, 25, 20, 20);
+          context.fillRect(23.5 * i, 19, 15, 15);
         } else {
           context.fillStyle = 'red';
           context.beginPath();
-          context.arc(25 * i, 25, 10, 0, 2 * Math.PI, true);
+          context.arc(25 * i, 25, 9, 0, 2 * Math.PI, true);
           context.closePath();
           context.fill();
         }
