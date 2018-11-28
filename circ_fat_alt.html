@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="draw()">
+    <canvas id="sketch" width="900" height="900">
+    </canvas>
+
+    <script>
+    function draw(){
+      var sketch = document.getElementById('sketch');
+      var context = sketch.getContext('2d');
+
+
+      for(var x = 1; x <= 9; x++){
+        for(var y = 1; y <= 9; y++){
+        if(x%2 === 0){
+          context.fillStyle = 'red';
+          context.beginPath();
+          context.arc(60 * x, 60 * x, 20 * x, 0, 2 * Math.PI, true);
+          context.closePath();
+          context.fill();
+        }else{
+          context.fillStyle = 'blue';
+          context.beginPath();
+          context.arc(60 * x, 60 * x, 20 * x, 0, 2 * Math.PI, true);
+          context.closePath();
+          context.fill();
+        }
+
+        }
+      }
+    }
+
+    </script>
+  </body>
+</html>
